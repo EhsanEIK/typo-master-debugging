@@ -15,123 +15,134 @@
     <main class="container">
         <section>
             <h1 class="text-center mt-5 mb-4">All Blogs</h1>
-            <div class="row row-cols-1 row-cols-md-1 g-5">
+            <div class="accordion" id="accordionExample">
                 <!-- question-01 -->
-                <div class="col">
-                    <div class="card h-100 rounded-2 shadow p-4">
-                        <div class="card-body">
-                            <h5 class="h3">Difference Between Local Storage and Session Storage.</h5>
-                            <hr>
-                            <p class="card-text">
-                                <span><strong><i>Local Storage:</i></strong>
-                                    Local storage is useful for storing data that the user will need to access later,
-                                    such as offline data. The stored data is not deleted when the browser is closed. It
-                                    allows <b>10MB</b> of data to be stored. Local Storage is a new feature introduced
-                                    in
-                                    HTML5. The data is stored on the browser and system.
-                                </span>
-                                <br><br>
-                                <span><strong><i>Session Storage:</i></strong>
-                                    Session storage is a great way to improve the performance of your web applications.
-                                    Session storage is useful for storing data that is sensitive, such as login
-                                    credentials. The data is stored only for the session and will be deleted when the
-                                    browser is closed. It allows <b>5MB</b> of data to be stored. It's a new feature
-                                    introduced
-                                    in HTML5. The data is stored on the
-                                    browser only.
-                                </span>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Difference Between Local Storage and Session Storage.
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p><strong><i>Local Storage:</i></strong>
+                                Local storage is useful for storing data that the user will need to access later,
+                                such as offline data. The stored data is not deleted when the browser is closed. It
+                                allows <b>10MB</b> of data to be stored. Local Storage is a new feature introduced
+                                in
+                                HTML5. The data is stored on the browser and system.
+                            </p>
+                            <p><strong><i>Session Storage:</i></strong>
+                                Session storage is a great way to improve the performance of your web applications.
+                                Session storage is useful for storing data that is sensitive, such as login
+                                credentials. The data is stored only for the session and will be deleted when the
+                                browser is closed. It allows <b>5MB</b> of data to be stored. It's a new feature
+                                introduced
+                                in HTML5. The data is stored on the
+                                browser only.
                             </p>
                         </div>
                     </div>
                 </div>
                 <!-- question-02 -->
-                <div class="col">
-                    <div class="card h-100 rounded-2 shadow p-4">
-                        <div class="card-body">
-                            <h5 class="h3">Difference Between Global Scope and Block Scope.</h5>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Difference Between Global Scope and Block Scope.
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p><strong class="h5"><i>Global Scope:</i></strong>
+                                A variable declared at the top of a program or outside of a function is considered a
+                                global scope variable.
+                                <br><br>
+                                <i>Example:</i><br>
+                                <b>
+                                    let a = "hello";<br>
+                                    function greet () { <br>
+                                    console.log(a); <br>
+                                    } <br>
+                                    greet(); // hello <br>
+                                </b>
+                                Here, variable <b>a</b> is declared at the top of a program and is a global
+                                variable. It
+                                means the variable <b>a</b> can be used anywhere in the program.
+                            </p>
                             <hr>
-                            <p class="card-text">
-                                <span><strong class="h5"><i>Global Scope:</i></strong>
-                                    A variable declared at the top of a program or outside of a function is considered a
-                                    global scope variable.
-                                    <br><br>
-                                    <i>Example:</i><br>
-                                    <b>
-                                        let a = "hello";<br>
-                                        function greet () { <br>
-                                        console.log(a); <br>
-                                        } <br>
-                                        greet(); // hello <br>
-                                    </b>
-                                    Here, variable <b>a</b> is declared at the top of a program and is a global
-                                    variable. It
-                                    means the variable <b>a</b> can be used anywhere in the program.
-                                </span>
-                                <br><br><br>
-                                <span><strong class="h5"><i>Block Scope:</i></strong>
-                                    A variable when declared inside the if or switch conditions or inside for or while
-                                    loops, are accessible within that particular condition or loop. To be consise the
-                                    variables declared inside the curly braces are called as within block scope.
-                                    <b>let</b> & <b>const</b> are also called as block scope that is they are accessible
-                                    within that particular block. <br><br>
-                                    <i>Example:</i><br>
-                                    <b>
-                                        function greet () { <br>
-                                        if(true){ <br>
-                                        let a = "hello"; <br>
-                                        console.log(a); // hello <br>
-                                        } <br>
-                                        console.log(a); // get a error <br>
-                                        } <br>
-                                        greet(); <br>
-                                    </b>
-                                    As the output shows when we try to access the variables a outside the if statement
-                                    it gives the error as it is declared using let keyword whereas these variable is
-                                    accessible inside the if statement.
-                                </span>
+                            <p><strong class="h5"><i>Block Scope:</i></strong>
+                                A variable when declared inside the if or switch conditions or inside for or while
+                                loops, are accessible within that particular condition or loop. To be consise the
+                                variables declared inside the curly braces are called as within block scope.
+                                <b>let</b> & <b>const</b> are also called as block scope that is they are accessible
+                                within that particular block. <br><br>
+                                <i>Example:</i><br>
+                                <b>
+                                    function greet () { <br>
+                                    if(true){ <br>
+                                    let a = "hello"; <br>
+                                    console.log(a); // hello <br>
+                                    } <br>
+                                    console.log(a); // get a error <br>
+                                    } <br>
+                                    greet(); <br>
+                                </b>
+                                As the output shows when we try to access the variables a outside the if statement
+                                it gives the error as it is declared using let keyword whereas these variable is
+                                accessible inside the if statement.
                             </p>
                         </div>
                     </div>
                 </div>
                 <!-- question-03 -->
-                <div class="col">
-                    <div class="card h-100 rounded-2 shadow p-4">
-                        <div class="card-body">
-                            <h5 class="h3">How does event loop work in JavaScript?</h5>
-                            <hr>
-                            <p class="card-text">
-                                <span><strong><i>Event Loop:</i></strong>
-                                    JavaScript is a single-threaded synchronous programming language. It means that the
-                                    main thread where JavaScript code is run, runs in one line at a time manner and
-                                    there is no possibility of running code in parallel. The event loop is a process
-                                    that waits for the Call Stack to be clear before pushing callbacks from the Task
-                                    Queue to the Call Stack. Once the Stack is clear, the event loop triggers and checks
-                                    the Task Queue for available callbacks. If there are any, it pushes it to the Call
-                                    Stack, waits for the Call Stack to be clear again, and repeats the same process.
-                                </span>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            How does event loop work in JavaScript?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p><strong><i>Event Loop:</i></strong>
+                                JavaScript is a single-threaded synchronous programming language. It means that the
+                                main thread where JavaScript code is run, runs in one line at a time manner and
+                                there is no possibility of running code in parallel. The event loop is a process
+                                that waits for the Call Stack to be clear before pushing callbacks from the Task
+                                Queue to the Call Stack. Once the Stack is clear, the event loop triggers and checks
+                                the Task Queue for available callbacks. If there are any, it pushes it to the Call
+                                Stack, waits for the Call Stack to be clear again, and repeats the same process.
                             </p>
                         </div>
                     </div>
                 </div>
                 <!-- question-04 -->
-                <div class="col">
-                    <div class="card h-100 rounded-2 shadow p-4">
-                        <div class="card-body">
-                            <h5 class="h3">How many ways can we find the undefined?</h5>
-                            <hr>
-                            <p class="card-text">
-                                <span><strong><i>There are 8 ways to get undefined in JavaScript:</i></strong>
-                                    <ol>
-                                        <li> Variable that is not initialized will give undefined.</li>
-                                        <li> Function with no return.</li>
-                                        <li> Parameter that is not passed will be undefined.</li>
-                                        <li> If return has nothing on the right side will give you undefined.</li>
-                                        <li> Property that doesn't exists on an object will give you undefined.</li>
-                                        <li> Accessing array elements outside of the index range.</li>
-                                        <li> Deleting an element inside an array.</li>
-                                        <li> Set a value directly to undefined.</li>
-                                    </ol>
-                                </span>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            How many ways can we find the undefined?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p><strong><i>There are 8 ways to get undefined in JavaScript:</i></strong>
+                            <ol>
+                                <li> Variable that is not initialized will give undefined.</li>
+                                <li> Function with no return.</li>
+                                <li> Parameter that is not passed will be undefined.</li>
+                                <li> If return has nothing on the right side will give you undefined.</li>
+                                <li> Property that doesn't exists on an object will give you undefined.</li>
+                                <li> Accessing array elements outside of the index range.</li>
+                                <li> Deleting an element inside an array.</li>
+                                <li> Set a value directly to undefined.</li>
+                            </ol>
                             </p>
                         </div>
                     </div>
