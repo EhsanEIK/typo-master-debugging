@@ -12,7 +12,40 @@
 </head>
 
 <body>
-
+    <main class="container">
+        <section>
+            <h1 class="text-center mt-5 mb-4">All Blogs</h1>
+            <div class="row row-cols-1 row-cols-md-1 g-4">
+                <div class="col">
+                    <div class="card h-100 rounded-2 shadow p-4">
+                        <div class="card-body">
+                            <h5 class="h3">Difference Between Local Storage and Session Storage.</h5>
+                            <hr>
+                            <p class="card-text">
+                                <span><strong><i>Local Storage:</i></strong>
+                                    Local storage is useful for storing data that the user will need to access later,
+                                    such as offline data. The stored data is not deleted when the browser is closed. It
+                                    allows <b>10MB</b> of data to be stored. Local Storage is a new feature introduced
+                                    in
+                                    HTML5. The data is stored on the browser and system.
+                                </span>
+                                <br><br>
+                                <span><strong><i>Session Storage:</i></strong>
+                                    Session storage is a great way to improve the performance of your web applications.
+                                    Session storage is useful for storing data that is sensitive, such as login
+                                    credentials. The data is stored only for the session and will be deleted when the
+                                    browser is closed. It allows <b>5MB</b> of data to be stored. It's a new feature
+                                    introduced
+                                    in HTML5. The data is stored on the
+                                    browser only.
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <!-- bootstrap js link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
